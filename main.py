@@ -40,6 +40,7 @@ def post_complete_lesson(db: Session = Depends(get_db), payload: dict = None, to
     if not lesson_id:
         raise HTTPException(status_code=400, detail="lessonId required")
     data = micro_learning_service.complete_lesson(db, token, lesson_id)
+<<<<<<< HEAD
 @router.get("/topics/detail/{topic_id}", response_model=APIResponse)
 def get_units_by_topic(db: Session = Depends(get_db), topic_id: str = None, token: str = Depends(oauth2_scheme)):
     if not topic_id:
@@ -47,6 +48,12 @@ def get_units_by_topic(db: Session = Depends(get_db), topic_id: str = None, toke
     data = micro_learning_service.get_units_by_topic_id(db, token, topic_id)
     return APIResponse(status_code=200, success=True, data={"topicId": topic_id, "units": data}, message="successful")
 <<<<<<< HEAD
+=======
+    return APIResponse(status_code=200, success=True, data={"topicId": topic_id, "units": data}, message="successful")
+    return APIResponse(status_code=200, success=True, data={"topicId": topic_id, "units": data}, message="successful")
+    return APIResponse(status_code=200, success=True, data={"topicId": topic_id, "units": data}, message="successful")
+    return APIResponse(status_code=200, success=True, data=data, message="lesson completed")
+>>>>>>> 76760a5 (fix bug)
 
 @router.get("/topics/detail/{topic_id}", response_model=APIResponse)
 def get_units_by_topic(db: Session = Depends(get_db), topic_id: str = None, token: str = Depends(oauth2_scheme)):
@@ -54,6 +61,8 @@ def get_units_by_topic(db: Session = Depends(get_db), topic_id: str = None, toke
         raise HTTPException(status_code=400, detail="topic_id is required")
     data = micro_learning_service.get_units_by_topic_id(db, token, topic_id)
     return APIResponse(status_code=200, success=True, data={"topicId": topic_id, "units": data}, message="successful")
+    return APIResponse(status_code=200, success=True, data={"topicId": topic_id, "units": data}, message="successful")
+app = FastAPI()return APIResponse(status_code=200, success=True, data={"topicId": topic_id, "units": data}, message="successful")
 
 @router.get("/topics/detail/{topic_id}", response_model=APIResponse)
 def get_units_by_topic(db: Session = Depends(get_db), topic_id: str = None, token: str = Depends(oauth2_scheme)):
