@@ -4,11 +4,11 @@ hainam C3
 hainam C4
 hainam C5
 hainam C6
-hainam C777777
+hainam C777777777
 hainam C8
 hainam C9
 hainam C10
-hainam C1111111
+hainam C1111111777
 hainam C11
 hainam C12
 hainam C13
